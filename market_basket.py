@@ -23,25 +23,22 @@ def support_count(orders, item_set):
     count = 0
 
     for order in orders[1:]:
-
         if item_set.issubset(order):
-            print("Found {} in {}".format(item_set, order))
+            #print("Found {} in {}".format(item_set, order))
             count += 1
         else:
-            print("Didn't find {} in {}".format(item_set, order))
-
-
+            #print("Didn't find {} in {}".format(item_set, order))
+            pass
     return count
 
-# def support_frequency(sums_of_items, total_items):
-#     #support_frequency_list = list()
-#     #for x in sums_of_items
-#     pass
+def support_frequency(orders, item_set):
+    N = len(orders[1:])
+    return support_count(orders, item_set)/N
 
 def main():
     data = read_CSV('market_basket.csv')
     item_set = set(['Eggs','Bread','Bananas'])
-    print(support_count(data, item_set))
+    print(support_frequency(data, item_set))
 
 
 if __name__ == '__main__':
