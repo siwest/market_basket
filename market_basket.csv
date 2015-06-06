@@ -1,21 +1,21 @@
 Eggs,Milk,Bread,Chicken,Beef,Salad greens,Yogurt,Bananas,Oranges,Spinach
-1,0,1,0,0,0,1,0,1,0
-0,0,1,1,1,0,0,1,0,0
-0,1,1,0,0,0,1,0,0,1
-1,0,1,0,0,0,0,0,0,0
-0,1,1,0,0,1,0,1,0,1
-0,0,1,0,0,1,0,0,0,0
-0,1,1,0,0,1,0,0,0,0
-0,1,0,1,0,0,0,0,1,0
-0,0,0,0,1,0,1,0,0,0
-0,1,0,0,1,0,0,0,0,0
-1,0,1,0,0,0,0,1,0,0
-0,0,1,0,0,1,0,0,0,0
-0,0,0,0,0,0,0,0,1,0
-1,1,0,0,0,0,1,0,0,0
-0,0,0,1,0,0,0,0,0,0
-0,0,1,0,0,0,0,0,0,0
-0,0,0,0,0,0,1,0,0,0
-0,1,1,0,0,0,0,0,0,1
-1,0,0,1,0,0,0,0,0,0
-1,0,1,0,1,0,0,1,0,1
+Eggs,0,Bread,0,0,0,Yogurt,0,Oranges,0
+0,0,Bread,Chicken,Beef,0,0,Bananas,0,0
+0,Milk,Bread,0,0,0,Yogurt,0,0,Spinach
+Eggs,0,Bread,0,0,0,0,0,0,0
+0,Milk,Bread,0,0,Salad greens,0,Bananas,0,Spinach
+0,0,Bread,0,0,Salad greens,0,0,0,0
+0,Milk,Bread,0,0,Salad greens,0,0,0,0
+0,Milk,0,Chicken,0,0,0,0,Oranges,0
+0,0,0,0,Beef,0,Yogurt,0,0,0
+0,Milk,0,0,Beef,0,0,0,0,0
+Eggs,0,Bread,0,0,0,0,Bananas,0,0
+0,0,Bread,0,0,Salad greens,0,0,0,0
+0,0,0,0,0,0,0,0,Oranges,0
+Eggs,Milk,0,0,0,0,Yogurt,0,0,0
+0,0,0,Chicken,0,0,0,0,0,0
+0,0,Bread,0,0,0,0,0,0,0
+0,0,0,0,0,0,Yogurt,0,0,0
+0,Milk,Bread,0,0,0,0,0,0,Spinach
+Eggs,0,0,Chicken,0,0,0,0,0,0
+Eggs,0,Bread,0,Beef,0,0,Bananas,0,Spinach

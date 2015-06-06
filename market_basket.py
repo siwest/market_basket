@@ -10,31 +10,38 @@ print("Hello world")
 def read_CSV(file_name):
 
     result = list()
-    with open(file_name, 'rb') as csv_file:
+    with open(file_name, 'r') as csv_file:
         file_reader = csv.reader(csv_file)
         for row in file_reader:
-            result.append(row)
+            order_set = set(row)-set(['0'])
+            result.append(order_set)
+    # print(result)
     return result
 
 
-def support_count(matrix):
-    rows = len(matrix)
-    cols = len(matrix[0])
-    sum_list = list()
-    transpose = [[row[i] for row in matrix] for i in range(cols)]
-    for row in transpose:
-        sum_list.append(sum(list(map(int, row[1:]))))
+def support_count(orders, item_set):
+    count = 0
 
-    #print(transpose)
-    #print(sum_list)
-    return sum_list
+    for order in orders[1:]:
 
-def support_frequency():
+        if item_set.issubset(order):
+            print("Found {} in {}".format(item_set, order))
+            count += 1
+        else:
+            print("Didn't find {} in {}".format(item_set, order))
 
+
+    return count
+
+# def support_frequency(sums_of_items, total_items):
+#     #support_frequency_list = list()
+#     #for x in sums_of_items
+#     pass
 
 def main():
     data = read_CSV('market_basket.csv')
-    support_count(data)
+    item_set = set(['Eggs','Bread','Bananas'])
+    print(support_count(data, item_set))
 
 
 if __name__ == '__main__':
