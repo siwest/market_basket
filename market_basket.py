@@ -2,6 +2,7 @@
 # Market basket python program
 
 import csv
+import itertools
 
 def read_CSV(file_name):
 
@@ -38,19 +39,9 @@ def confidence(orders, left, right):
     result = right_count/left_count
     return result
 
-def apriori(orders, support_threshold):
-    #frequency_list1 = list()
-    N = len(orders[1:])
-
-    inventory_list = orders[0]  #inventory_list is the header of the csv file
-    print('Inventory List: \n' + str(inventory_list) + '\n')
-
-    test_set = orders
-    transaction = test_set.pop()
-
+def generate_candidate_set(orders, inventory_list, support_threshold):
     candidate_set = set()
-
-    while (inventory_list): # count support for each item in inventory list
+    while (inventory_list): # find frequent item sets, save in candidate_set
         unique_item = inventory_list.pop()
 
         candidate_set.add(unique_item)
@@ -61,13 +52,44 @@ def apriori(orders, support_threshold):
         s = support_frequency(orders, temp_set)
 
         if (s < support_threshold):
-            print(unique_item + ' ' + str(s) + " does not meet threshold ")
+            print(str(unique_item) + ' ' + str(s) + " does not meet threshold ")
             candidate_set.remove(unique_item)
         else:
-            print(unique_item + ' ' + str(s) + " meets threshold ")
+            print(str(unique_item) + ' ' + str(s) + " meets threshold ")
     pass
 
-    print ('\nCandidate Set: \n' + str(candidate_set))
+
+    #print ('\nCandidate Set: \n' + str(candidate_set))
+    return candidate_set
+
+def apriori(orders, support_threshold):
+    #frequency_list1 = list()
+    N = len(orders[1:])
+
+    inventory_list = orders[0]  #inventory_list is the header of the csv file
+    print('Inventory List: \n' + str(inventory_list) + '\n')
+
+    test_set = orders
+    transaction = test_set.pop()
+
+    one_item_candidate_set = set() #find all frequen 1-itemsets
+    one_item_candidate_set = generate_candidate_set(orders, inventory_list, support_threshold)
+
+    k_item_candidate_set = one_item_candidate_set
+
+    k = 2
+    while(k<N):
+        k_item_set = set(itertools.combinations(k_item_candidate_set, k))
+        k_item_candidate_set = generate_candidate_set(orders, k_item_set, support_threshold)
+        k=k+1
+    pass
+
+
+    # k = len(one_item_candidate_set)
+    # for candidate in one_item_candidate_set: #extract the frequent k-itemsets
+    #     new_item_set = set()
+    #     new_item_set.add(candidate)
+    #     for
 
 
 
