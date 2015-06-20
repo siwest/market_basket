@@ -1,0 +1,21 @@
+Leash,Cat litter,Scoop,Dog treat,Cat treat,Cat food,Dog food,Fish food,Cat toy,Dog toy,Fountain,Box,Feather toy,Blue ball,Red ball,Green ball,Eye drops,Formula,Red bowl,Blue bowl,Green bowl
+Green bowl,Green ball
+Red ball,Red bowl
+Blue bowl,Blue ball
+Cat toy,Cat food
+Dog toy,Dog food
+Cat litter,Scoop,Blue bowl,Blue ball,Cat toy,Cat food
+Cat litter,Red bowl,Red ball,Cat toy,Cat food
+Leash,Dog toy,Dog food
+Leash,Dog food
+Leash,Dog food,Green bowl,Eye drops
+Blue bowl,Green bowl
+Formula,Red bowl
+Eye drops,Formula
+Cat litter,Scoop
+Leash,Cat litter,Scoop
+Fish food,Cat toy,Dog toy
+Cat treat,Cat food
+Dog treat,Dog food
+Fountain,Box,Cat treat,Cat food
+Feather toy,Blue ball,Red ball,Green ball,Eye drops,Formula,Red bowl,Blue bowl,Green bowl
